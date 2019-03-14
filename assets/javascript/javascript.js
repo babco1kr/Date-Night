@@ -1,4 +1,3 @@
-// Global Variables
 $(document).ready(function() {
 
 

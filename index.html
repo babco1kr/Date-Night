@@ -4,13 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <title>Random Date</title>
+    <!-- materialize css -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="./assets/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
     <!-- Reset CSS file -->
-    <link rel="stylesheet" href="assets/css/reset.css">
+    <!-- <link rel="stylesheet" href="assets/css/reset.css"> -->
     <!-- Link to Our CSS file -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
+    <nav class="black" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo">Logo</a>
+            <!-- <ul class="right hide-on-med-and-down"> -->
+            <!-- <li><a href="#">Navbar Link</a></li> -->
+            <!-- </ul> -->
+        </div>
+    </nav>
+
+
+    <!-- Carousel -->
+    <div class="carousel carousel-slider">
+        <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/800/400/food/1"></a>
+        <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/800/400/food/2"></a>
+        <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/800/400/food/3"></a>
+        <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/800/400/food/4"></a>
+    </div>
+
+    <!-- forms -->
+    <div id="content-area">
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="city-input" class="materialize-textarea"></textarea>
+                        <label for="city">Textarea</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="state-input" class="materialize-textarea"></textarea>
+                        <label for="state">Textarea</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- summit button -->
+
+        <button id="submitbutton" class="btn waves-effect waves-light" type="submit" name="action">Get Date!
+            <i class="material-icons right">send</i>
+        </button>
+    </div>
+
+
+
 
 
 
@@ -18,6 +71,8 @@
     <!-- Jquery Link -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- materialize js -->
+    <script src="assets/javascript/materialize.min.js"></script>
     <!-- Javascript file link -->
     <script src="assets/javascript/javascript.js"></script>
 </body>
