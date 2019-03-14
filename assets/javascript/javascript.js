@@ -16,6 +16,11 @@ $("#submitbutton").on("click", function(event) {
 })
 
 
+    $('.carousel.carousel-slider').carousel({
+        fullWidth: true
+      });
+            
+
 // Function for calling movie API
 function movies () {
 var queryURL = "https://api.themoviedb.org/3/discover/movie?api_key=d9dbc09a5b4424d83367d7f502248bf6&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1";
