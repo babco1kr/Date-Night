@@ -1,8 +1,7 @@
 body {
-    background-color: white;
-  
-   
+    background-image: url(../../assets/images/clouds.jpeg);
 }
+
 #content-area {
    
     margin-top: 300px;
@@ -10,4 +9,19 @@ body {
     margin: auto;
     width: 50%;
     border: 3px solid white;
+    background-color: rgb(255, 255, 255, .5);
+}
+
+#submitbutton {
+    background-color: red;
+}
+
+header {
+    padding: 5px;
+    
+    font-family: 'Sacramento', cursive;
+}
+
+h1 {
+    font-size: 85px;
 }
