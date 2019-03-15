@@ -53,18 +53,18 @@ $(document).ready(function () {
         }).then(function (response) {
             console.log(response);
             var number = (Math.floor(Math.random() * response.results.length));
-            console.log(number);
-            var isOpenNow = response.results[number].opening_hours.open_now;
-            console.log(isOpenNow);
-            checkHours();
-            function checkHours () {
-            if (isOpenNow = true) {
-                var foodPhoto = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=" + response.results[number].photos[0].photo_reference + "&key=AIzaSyBLMlKcGTafBPYMN1Ybe9oe4JVWHYFLFIE";
+            console.log("First Number: " + number);
+            checkHours(number);
+            function checkHours (x) {
+                var isOpenNow = response.results[number].opening_hours.open_now;
+                console.log(isOpenNow);
+            if (isOpenNow === true) {
+                var foodPhoto = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=" + response.results[x].photos[0].photo_reference + "&key=AIzaSyBLMlKcGTafBPYMN1Ybe9oe4JVWHYFLFIE";
                 var newDiv = $("<div>");
                 var heading = $("<h1>");
                 var p = $("<p>");
-                heading.text(response.results[number].name);
-                var pricing = response.results[number].price_level;
+                heading.text(response.results[x].name);
+                var pricing = response.results[x].price_level;
                 console.log(pricing);
                     var priceDisplay = "";
                     if (pricing === 1) {
@@ -89,7 +89,8 @@ $(document).ready(function () {
                 $("#content-area").append(newDiv);
             } else {
                 number = (Math.floor(Math.random() * response.results.length));
-                checkHours();
+                console.log("Next number:" + number);
+                checkHours(number);
             }
 
         }
