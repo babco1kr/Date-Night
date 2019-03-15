@@ -29,8 +29,10 @@ $(document).ready(function () {
             var number = (Math.floor(Math.random() * response.results.length));
             var movie = response.results[number];
             var newDiv = $("<div>");
-            var heading = $("<h1>");
+            newDiv.addClass("center-align");
+            var heading = $("<h3>");
             var image = $("<img>");
+            image.addClass("responsive-img");
             heading.text(movie.title);
             var poster = "https://image.tmdb.org/t/p/w500" + movie.poster_path;
             image.attr("src", poster);
@@ -61,8 +63,9 @@ $(document).ready(function () {
             if (isOpenNow === true) {
                 var foodPhoto = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=" + response.results[x].photos[0].photo_reference + "&key=AIzaSyBLMlKcGTafBPYMN1Ybe9oe4JVWHYFLFIE";
                 var newDiv = $("<div>");
-                var heading = $("<h1>");
-                var p = $("<p>");
+                newDiv.addClass("center-align");
+                var heading = $("<h3>");
+                var p = $("<h5>");
                 heading.text(response.results[x].name);
                 var pricing = response.results[x].price_level;
                 console.log(pricing);
@@ -82,8 +85,9 @@ $(document).ready(function () {
                     else if (pricing === 5) {
                         priceDisplay = "$$$$$"
                     };
-                    p.text(priceDisplay);
+                    p.text("Price Level: " + priceDisplay);
                 var image = $("<img>");
+                image.addClass("responsive-img");
                 image.attr("src", foodPhoto);
                 newDiv.append(heading, p, image);
                 $("#content-area").append(newDiv);
