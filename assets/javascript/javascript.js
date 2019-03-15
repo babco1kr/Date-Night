@@ -14,11 +14,6 @@ $("#submitbutton").on("click", function(event) {
     food();
 
 })
-
-
-    $('.carousel.carousel-slider').carousel({
-        fullWidth: true
-      });
             
 
 // Function for calling movie API
@@ -31,6 +26,19 @@ $.ajax({
     method: "GET"
 }).then(function(response){
     console.log(response);
+    var number = (Math.floor(Math.random()*response.results.length));
+    var movie = response.results[number];
+    var newDiv = $("<div>");
+    var heading = $("<h1>");
+    var image = $("<img>");
+    heading.text(movie.title);
+    var poster = "https://image.tmdb.org/t/p/w500" + movie.poster_path;
+    image.attr("src", poster);
+    console.log(movie.poster_path);
+    newDiv.append(heading, image);
+    $("#content-area").append(newDiv);
+    console.log(number);
+
 })
 }
 
@@ -46,16 +54,19 @@ $.ajax({
     console.log(response);
     var number = (Math.floor(Math.random()*response.results.length));
     console.log(number);
-    var queryURL2 = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=" + response.results[number].photos[0].photo_reference + "&key=AIzaSyBLMlKcGTafBPYMN1Ybe9oe4JVWHYFLFIE";
+    var foodPhoto = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=" + response.results[number].photos[0].photo_reference + "&key=AIzaSyBLMlKcGTafBPYMN1Ybe9oe4JVWHYFLFIE";
 
-
+    var newDiv = $("<div>");
+    var heading = $("<h1>");
+    heading.text(response.results[number].name);
     var image = $("<img>");
-    image.attr("src", queryURL2);
-    $("#content-area").append(image);
+    image.attr("src", foodPhoto);
+    newDiv.append(heading, image);
+    $("#content-area").append(newDiv);
 
 })
 }
-var instance = M.Carousel.init({
+$('.carousel.carousel-slider').carousel({
     fullWidth: true
   });
 })
