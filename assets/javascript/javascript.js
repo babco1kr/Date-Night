@@ -12,9 +12,18 @@ $(document).ready(function () {
         $("#userInputs").empty();
         movies();
         food();
+        retry();
+        
 
     })
 
+    $("#retry").on("click", "#retrybutton", function (event) {
+        event.preventDefault();
+        $("#movie").empty();
+        $("#food").empty();
+        movies();
+        food();
+    })
 
     // Function for calling movie API
     function movies() {
@@ -101,6 +110,14 @@ $(document).ready(function () {
 
             }
         })
+    }
+
+    function retry () {
+        var button = $("<button>");
+        button.text("Retry");
+        button.addClass("btn waves-effect waves-light");
+        button.attr("id", "retrybutton");
+        $("#retry").append(button);
     }
 })
 
