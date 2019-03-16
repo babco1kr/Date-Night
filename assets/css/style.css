@@ -1,5 +1,7 @@
 body {
     background-image: url(../../assets/images/clouds.jpeg);
+
+    
 }
 
 #content-area {
@@ -7,18 +9,33 @@ body {
     padding: 10px;
     border: 3px solid white;
     background-color: rgb(255, 255, 255, .5);
+    margin-bottom: 400px;
 }
 
 #submitbutton {
     background-color: red;
 }
 
+#pageTitle {
+    font-family: 'Sacramento', cursive;
+}
 header {
     padding: 5px;
-    
-    font-family: 'Sacramento', cursive;
 }
 
 h1 {
     font-size: 85px;
+}
+
+
+footer {
+/* padding: 30px 0; */
+/* clear: both; */
+
+/* text-align: center; */
+background: #ffab9b;
+height: 64px;
+bottom: 0;
+right: 0;
+left: 0;
 }
