@@ -36,6 +36,8 @@ $(document).ready(function () {
             heading.text(movie.title);
             var poster = "https://image.tmdb.org/t/p/original" + movie.poster_path;
             image.attr("src", poster);
+            image.attr("height", '50%');
+            image.attr("width", '50%');
             console.log(movie.poster_path);
             newDiv.append(heading, image);
             $("#movie").append(newDiv);
