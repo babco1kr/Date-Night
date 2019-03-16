@@ -9,7 +9,7 @@ $(document).ready(function () {
         state = $("#state-input").val().trim();
         console.log(city);
         console.log(state);
-        $("#content-area").empty();
+        $("#userInputs").empty();
         movies();
         food();
 
@@ -34,11 +34,11 @@ $(document).ready(function () {
             var image = $("<img>");
             image.addClass("responsive-img");
             heading.text(movie.title);
-            var poster = "https://image.tmdb.org/t/p/w500" + movie.poster_path;
+            var poster = "https://image.tmdb.org/t/p/original" + movie.poster_path;
             image.attr("src", poster);
             console.log(movie.poster_path);
             newDiv.append(heading, image);
-            $("#content-area").append(newDiv);
+            $("#movie").append(newDiv);
             console.log(number);
 
         })
@@ -57,18 +57,18 @@ $(document).ready(function () {
             var number = (Math.floor(Math.random() * response.results.length));
             console.log("First Number: " + number);
             checkHours(number);
-            function checkHours (x) {
+            function checkHours(x) {
                 var isOpenNow = response.results[number].opening_hours.open_now;
                 console.log(isOpenNow);
-            if (isOpenNow === true) {
-                var foodPhoto = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=" + response.results[x].photos[0].photo_reference + "&key=AIzaSyBLMlKcGTafBPYMN1Ybe9oe4JVWHYFLFIE";
-                var newDiv = $("<div>");
-                newDiv.addClass("center-align");
-                var heading = $("<h3>");
-                var p = $("<h5>");
-                heading.text(response.results[x].name);
-                var pricing = response.results[x].price_level;
-                console.log(pricing);
+                if (isOpenNow === true) {
+                    var foodPhoto = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=" + response.results[x].photos[0].photo_reference + "&key=AIzaSyBLMlKcGTafBPYMN1Ybe9oe4JVWHYFLFIE";
+                    var newDiv = $("<div>");
+                    newDiv.addClass("center-align");
+                    var heading = $("<h3>");
+                    var p = $("<h5>");
+                    heading.text(response.results[x].name);
+                    var pricing = response.results[x].price_level;
+                    console.log(pricing);
                     var priceDisplay = "";
                     if (pricing === 1) {
                         priceDisplay = "$"
@@ -86,18 +86,18 @@ $(document).ready(function () {
                         priceDisplay = "$$$$$"
                     };
                     p.text("Price Level: " + priceDisplay);
-                var image = $("<img>");
-                image.addClass("responsive-img");
-                image.attr("src", foodPhoto);
-                newDiv.append(heading, p, image);
-                $("#content-area").append(newDiv);
-            } else {
-                number = (Math.floor(Math.random() * response.results.length));
-                console.log("Next number:" + number);
-                checkHours(number);
-            }
+                    var image = $("<img>");
+                    image.addClass("responsive-img");
+                    image.attr("src", foodPhoto);
+                    newDiv.append(heading, p, image);
+                    $("#food").append(newDiv);
+                } else {
+                    number = (Math.floor(Math.random() * response.results.length));
+                    console.log("Next number:" + number);
+                    checkHours(number);
+                }
 
-        }
+            }
         })
     }
 })

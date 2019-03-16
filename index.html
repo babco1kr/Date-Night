@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
     <meta charset="UTF-8">
     <title>Random Date</title>
@@ -14,45 +15,52 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=BioRhyme+Expanded|Sacramento" rel="stylesheet">
 </head>
+
 <body>
- 
+
     <header>
         <h1 class="center-align">Random Date Generator</h1>
     </header>
-   
-</div>
-   
+
+    </div>
+
     <!-- forms -->
-    <div id="content-area">
+    <div id="content-area" class="container">
         <div class="row">
-            <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s12">
-                        <textarea id="city-input" class="materialize-textarea"></textarea>
-                        <label for="city">City</label>
-                    </div>
-                </div>
-            </form>
+            <div class="col s6" id="movie"></div>
+            <div class="col s6" id="food"></div>
         </div>
-        
-        <div class="row">
-            <form class="col s12">
-                <div class="row">
-                    <div class="input-field col s12">
-                        <textarea id="state-input" class="materialize-textarea"></textarea>
-                        <label for="state">State</label>
+        <div id="userInputs">
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea id="city-input" class="materialize-textarea"></textarea>
+                            <label for="city">City</label>
+                        </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
+
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea id="state-input" class="materialize-textarea"></textarea>
+                            <label for="state">State</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- summit button -->
+            <h5 class="center-align">
+
+                <button id="submitbutton" class="btn waves-effect waves-light" type="submit" name="action">Get Date!
+                    <i class="material-icons right">send</i>
+                </button>
         </div>
-        <!-- summit button -->
-        <h5 class="center-align">
 
-        <button id="submitbutton" class="btn waves-effect waves-light" type="submit" name="action">Get Date!
-            <i class="material-icons right">send</i>
-        </button>
 
-        
 
 
         </h5>
@@ -65,4 +73,5 @@
     <!-- Javascript file link -->
     <script src="assets/javascript/javascript.js"></script>
 </body>
+
 </html>
