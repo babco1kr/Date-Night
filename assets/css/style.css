@@ -19,13 +19,20 @@ body {
 
 #pageTitle {
     font-family: 'Sacramento', cursive;
+    font-size: 85px;
 }
 header {
     padding: 5px;
 }
 
-h1 {
-    font-size: 85px;
+h3 {
+    font-family: 'BioRhyme Expanded', serif;
+    font-size: 20px;
+}
+h5 {
+    font-family: 'BioRhyme Expanded', serif;
+
+    font-size: 15px;
 }
 
 main {
@@ -35,8 +42,28 @@ main {
 footer {
 
 background: #ffab9b;
+opacity: .5;
 bottom: 0;
 right: 0;
 left: 0;
 display: flex;
 }
+
+textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px black !important;
+        box-shadow: 0 1px 0 0 black !important;
+}
+
+textarea.materialize-textarea:focus:not([readonly])+label {
+    color: black !important;
+}
+
+#submitbutton, #retrybutton {
+    width: 80%;
+    background: #ffab9b;
+    font-family: 'Shadows Into Light', cursive;
+
+
+}
+
+
