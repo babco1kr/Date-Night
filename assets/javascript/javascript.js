@@ -27,7 +27,7 @@ $(document).ready(function () {
 
     // Function for calling movie API
     function movies() {
-        var queryURL = "https://api.themoviedb.org/3/discover/movie?api_key=d9dbc09a5b4424d83367d7f502248bf6&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1";
+        var queryURL = "https://api.themoviedb.org/3/discover/movie?api_key=" + movieKey + "&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1";
 
 
         $.ajax({
@@ -58,7 +58,7 @@ $(document).ready(function () {
 
     // Function for calling food API
     function food() {
-        var queryURL = "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?query=restaurants+in+" + city + "+" + state + "&fields=photos&key=AIzaSyBLMlKcGTafBPYMN1Ybe9oe4JVWHYFLFIE";
+        var queryURL = "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?query=restaurants+in+" + city + "+" + state + "&fields=photos&key=" + googleKey;
 
         $.ajax({
             url: queryURL,
@@ -72,7 +72,7 @@ $(document).ready(function () {
                 var isOpenNow = response.results[number].opening_hours.open_now;
                 console.log(isOpenNow);
                 if (isOpenNow === true) {
-                    var foodPhoto = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=" + response.results[x].photos[0].photo_reference + "&key=AIzaSyBLMlKcGTafBPYMN1Ybe9oe4JVWHYFLFIE";
+                    var foodPhoto = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=" + response.results[x].photos[0].photo_reference + "&key=" + googleKey;
                     var newDiv = $("<div>");
                     newDiv.addClass("center-align");
                     var heading = $("<h3>");
