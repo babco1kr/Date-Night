@@ -82,20 +82,24 @@ $(document).ready(function () {
                     var priceDisplay = "";
                     if (pricing === 1) {
                         priceDisplay = "$"
+                        p.text("Price Level: " + priceDisplay);
                     }
                     else if (pricing === 2) {
                         priceDisplay = "$$"
+                        p.text("Price Level: " + priceDisplay);
                     }
                     else if (pricing === 3) {
                         priceDisplay = "$$$"
+                        p.text("Price Level: " + priceDisplay);
                     }
                     else if (pricing === 4) {
                         priceDisplay = "$$$$"
+                        p.text("Price Level: " + priceDisplay);
                     }
                     else if (pricing === 5) {
                         priceDisplay = "$$$$$"
+                        p.text("Price Level: " + priceDisplay);
                     };
-                    p.text("Price Level: " + priceDisplay);
                     var image = $("<img>");
                     image.addClass("responsive-img");
                     image.attr("src", foodPhoto);
