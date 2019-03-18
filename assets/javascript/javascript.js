@@ -27,8 +27,7 @@ $(document).ready(function () {
 
     // Function for calling movie API
     function movies() {
-        var queryURL = "https://api.themoviedb.org/3/discover/movie?api_key=" + movieKey + "&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1";
-
+        var queryURL = "https://api.themoviedb.org/3/movie/now_playing?api_key=" + movieKey + "&language=en-US&region=US";
 
         $.ajax({
             url: queryURL,
