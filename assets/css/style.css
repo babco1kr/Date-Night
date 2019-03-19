@@ -1,5 +1,5 @@
 body {
-    background-image: url(../../assets/images/clouds.jpeg);
+    background-image: url(../../assets/images/movie.jpeg);
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -11,10 +11,7 @@ body {
     border: 3px solid white;
     background-color: rgb(255, 255, 255, .5);
     margin-bottom: 20px;
-}
-
-#submitbutton, #retrybutton {
-    background-color: red;
+    font-family: 'Questrial', sans-serif;
 }
 
 #pageTitle {
@@ -26,13 +23,7 @@ header {
 }
 
 h3 {
-    font-family: 'BioRhyme Expanded', serif;
-    font-size: 20px;
-}
-h5 {
-    font-family: 'BioRhyme Expanded', serif;
-
-    font-size: 15px;
+    font-size: 30px;
 }
 
 main {
@@ -40,13 +31,15 @@ main {
   }
 
 footer {
-
-background: #ffab9b;
 opacity: .5;
 bottom: 0;
 right: 0;
 left: 0;
 display: flex;
+}
+
+.page-footer {
+    background: rgb(152,131,130);
 }
 
 textarea.materialize-textarea:focus:not([readonly]) {
@@ -60,10 +53,8 @@ textarea.materialize-textarea:focus:not([readonly])+label {
 
 #submitbutton, #retrybutton {
     width: 80%;
-    background: #ffab9b;
-    font-family: 'Shadows Into Light', cursive;
-
-
+    background: rgb(152,131,130);
+    font-family: 'Questrial', sans-serif;
 }
 
 
