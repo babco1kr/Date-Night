@@ -57,4 +57,7 @@ textarea.materialize-textarea:focus:not([readonly])+label {
     font-family: 'Questrial', sans-serif;
 }
 
-
+#posterInfo {
+    font-family: 'Questrial', sans-serif;
+    font-size: 18px;
+}

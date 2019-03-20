@@ -62,6 +62,3 @@ typings/
 
 # mac files not needed
 .DS_Store
-
-#key
-key.js
