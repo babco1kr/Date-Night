@@ -19,6 +19,8 @@ $(document).ready(function () {
         event.preventDefault();
         $("#movie").empty();
         $("#food").empty();
+        $("#posterInfo").empty();
+        $("#poster").empty();
         movies();
         food();
     })
